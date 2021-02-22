@@ -1,0 +1,21 @@
+{% load mathjax %}
+<html>
+    <head>
+        <title>Project Euler</title>
+        {% mathjax_scripts %}
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Project Euler Türkçe Websitesi</a></h1>
+        </div>
+
+        {% for question in questions %}
+                <div>
+                        <p>published: {{ question.published_date }}</p>
+                                <h2><a href="">{{ question.title }}</a></h2>
+                        <p>{{ question.text|linebreaksbr }}</p>
+                </div>
+        {% endfor %}
+
+    </body>
+</html>
