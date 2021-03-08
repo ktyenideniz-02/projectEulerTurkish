@@ -4,9 +4,7 @@
 {% block content %}
         {% for question in questions %}
                 <div>
-                        <h2><a href="{% url 'question_detail' pk=question.pk %}">{{ question.title }}</a></h2>
-                        <p>published: {{ question.published_date }}</p>
-                        <p>{{ question.text|linebreaksbr }}</p>
+                        <h2><a href="{% url 'question_detail' pk=question.pk %}">Soru {{ question.pk }}</a></h2>
                 </div>
         {% endfor %}
 {% endblock %}

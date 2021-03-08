@@ -9,3 +9,6 @@ def question_list(request):
 def question_detail(request, pk):
         question = get_object_or_404(Question, pk=pk)
         return render(request, 'website/question_detail.html', {'question': question})
+
+def about(request):
+        return render(request, 'website/about.html')

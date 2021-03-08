@@ -10,5 +10,6 @@
                         </time>
                 {% endif %}
                 <p>{{ question.text|linebreaksbr }}</p>
+                <h2><a href="{% url 'question_list'%}">Soru listesine dön</a></h2>
         </article>
 {% endblock %}

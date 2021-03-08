@@ -1,0 +1,7 @@
+{% extends 'website/base.html' %}
+
+{% block content %}
+        <p>Bu site <a href="https://projecteuler.net">projecteuler.net</a> sitesindeki soruların Türkçe çevirilerini içermektedir. </p>
+        <p>Sorular Robert Kolej öğrencilerinin katkıları ile çevrilmiştir.</p>
+        <h2><a href="{% url 'question_list'%}">Soru Listesi</a></h2>
+{% endblock %}
