@@ -1,0 +1,14 @@
+{% extends 'website/base.html' %}
+
+{% load mathjax %}
+{% block content %}
+        <article class="question">
+                <h2>{{ post.title }}</h2>
+                {% if question.published_date %}
+                        <time class="date">
+                        {{ question.published_date }}
+                        </time>
+                {% endif %}
+                <p>{{ question.text|linebreaksbr }}</p>
+        </article>
+{% endblock %}
