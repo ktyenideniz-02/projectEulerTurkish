@@ -1,8 +1,12 @@
+{% load static %}
 {% load mathjax %}
+
 
 <html>
     <head>
-        <title>Project Euler</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'base.css' %}">
+        <title>Project Euler Türkçe Websitesi</title>
     </head>
     <body>
         {% mathjax_scripts %}
@@ -19,5 +23,10 @@
                 </div>
             </div>
         </main>
+        <footer class="page-footer">
+            <div class="container">
+                <h1><a href="{% url 'question_list'%}">Soru Listesi</a></h1>
+            </div>
+        </footer>
     </body>
 </html>

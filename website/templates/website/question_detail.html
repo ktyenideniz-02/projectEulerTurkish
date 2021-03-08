@@ -4,12 +4,11 @@
 {% block content %}
         <article class="question">
                 <h2>{{ post.title }}</h2>
-                {% if question.published_date %}
+                <p>{{ question.text|linebreaksbr }}</p>
+                {% if question.created_date %}
                         <time class="date">
-                        {{ question.published_date }}
+                        {{ question.created_date }}
                         </time>
                 {% endif %}
-                <p>{{ question.text|linebreaksbr }}</p>
-                <h2><a href="{% url 'question_list'%}">Soru listesine dön</a></h2>
         </article>
 {% endblock %}

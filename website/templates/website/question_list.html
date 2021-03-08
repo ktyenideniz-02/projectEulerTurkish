@@ -2,9 +2,17 @@
 
 {% load mathjax %}
 {% block content %}
+<table style="left: 50px">
+        <tr>
+                <th>Soru Numarası</th>
+                <th>Başlık</th>
+        </tr>
         {% for question in questions %}
-                <div>
-                        <h2><a href="{% url 'question_detail' pk=question.pk %}">Soru {{ question.pk }}</a></h2>
-                </div>
+                <tr>
+                        <td>{{ question.pk }}</td>
+                        <td><a href="{% url 'question_detail' pk=question.pk %}">{{ question.title }}</a></td>
+                </tr>
         {% endfor %}
+
+</table>
 {% endblock %}
